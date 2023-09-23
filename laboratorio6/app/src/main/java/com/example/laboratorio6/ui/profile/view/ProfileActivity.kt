@@ -1,8 +1,6 @@
 package com.example.laboratorio6.ui.profile.view
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,19 +10,15 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.KeyboardArrowUp
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material.icons.outlined.Notifications
 import androidx.compose.material.icons.outlined.Person
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.ListItem
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -39,36 +33,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.example.laboratorio6.ui.theme.Laboratorio6Theme
-
-class ProfileActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            Laboratorio6Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    ProfilePage()
-                }
-            }
-        }
-    }
-}
-
-@Preview
-@Composable
-fun Profile(){ //Preview de pantalla
-    Laboratorio6Theme {
-        ProfilePage()
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable //Componente de ProfilePage
@@ -86,7 +53,7 @@ fun Editable(icon: ImageVector, text: String){
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ProfilePage(){
-    Column {
+    Column(verticalArrangement = Arrangement.Top, modifier = Modifier.fillMaxSize()) {
         Box(modifier = Modifier
             .fillMaxWidth() //Especificaciones del contenedor
             .align(Alignment.CenterHorizontally)){

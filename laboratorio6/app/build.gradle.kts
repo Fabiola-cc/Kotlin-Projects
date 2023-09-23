@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.laboratorio6"
-    compileSdk = 33
+    compileSdk = 34
 
 
     defaultConfig {
@@ -51,6 +51,12 @@ android {
 }
 
 dependencies {
+    implementation("androidx.compose.ui:ui-android:1.5.0")
+    val nav_version = "2.5.3"
+    val accompanist_version = "0.32.0"
+    implementation("com.google.accompanist:accompanist-pager:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanist_version")
+    implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("io.coil-kt:coil-compose:2.4.0") //Added for images
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
