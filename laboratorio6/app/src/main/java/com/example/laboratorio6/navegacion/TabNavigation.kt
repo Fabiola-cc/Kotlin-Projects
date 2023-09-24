@@ -17,12 +17,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.laboratorio6.ui.theme.Coral
 
+/**
+ * Función principal de barra de navegación
+ * Mostrando la pantalla de acuerdo a lo seleccionado en la barra
+ */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TabNavigation() {
-    val tabs = listOf(TabItem.Home, TabItem.Places, TabItem.Favorites, TabItem.Profile )
+    val tabs = listOf(TabItem.Home, TabItem.Places, TabItem.Favorites, TabItem.Profile ) //Elementos en barra
     val pagerState = rememberPagerState { tabs.count() }
-    Scaffold(
+    Scaffold( //Estructura en pantalla
         topBar = { TopBar() },
     ) { padding ->
         Column(modifier = Modifier.padding(padding)) {
@@ -32,6 +36,7 @@ fun TabNavigation() {
     }
 }
 
+//Desplazamiento de elementos en la barra
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun TabsContent(tabs: List<TabItem>, pagerState: PagerState) {
@@ -40,6 +45,7 @@ fun TabsContent(tabs: List<TabItem>, pagerState: PagerState) {
     }
 }
 
+//Barra de titulo de app
 @Composable
 fun TopBar() {
     TopAppBar(

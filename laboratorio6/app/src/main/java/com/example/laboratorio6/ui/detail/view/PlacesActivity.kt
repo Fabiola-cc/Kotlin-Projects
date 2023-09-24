@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.laboratorio6.ui.events.view.Ievent
+import com.example.laboratorio6.ui.events.viewmodel.Ievent
 import com.example.laboratorio6.ui.theme.Apricot
 import com.example.laboratorio6.ui.theme.Coral
 
