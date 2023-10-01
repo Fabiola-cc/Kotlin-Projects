@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.lab7"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.lab7"
@@ -50,6 +50,21 @@ android {
 }
 
 dependencies {
+    // RETROFIT
+    implementation("com.google.code.gson:gson:2.9.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //For navigation
+    implementation("androidx.compose.ui:ui-android:1.5.0")
+    val nav_version = "2.5.3"
+    val accompanist_version = "0.32.0"
+    implementation("com.google.accompanist:accompanist-pager:$accompanist_version")
+    implementation("com.google.accompanist:accompanist-pager-indicators:$accompanist_version")
+    implementation("androidx.navigation:navigation-compose:$nav_version")
+
+    //Added for images
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
